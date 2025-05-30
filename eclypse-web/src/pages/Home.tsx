@@ -3,7 +3,6 @@ import HeroVideo from '../components/HeroVideo';
 import Gallery from '../components/Gallery';
 import ProductDetail from '../components/ProductDetails';
 import ProductDetailsAccordion from '../components/ProductDetailsAccordion';
-import Footer from '../components/Footer';
 import CustomerReview from '../components/CustomerReview';
 
 
