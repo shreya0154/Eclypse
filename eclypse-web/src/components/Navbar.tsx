@@ -11,13 +11,6 @@ const Navbar = () => {
 
   const isHome = location.pathname === '/';
 
-  const goToCart = () => {
-    navigate('/cart');
-  };
-  const goToHome=()=>{
-    navigate('/');
-  }
-
   useEffect(() => {
     const onScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -27,6 +20,13 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const goToCart = () => {
+    navigate('/cart');
+  };
+
+  const goToHome=()=>{
+    navigate('/');
+  }
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);

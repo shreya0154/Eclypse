@@ -11,6 +11,32 @@ export default function ProductDetail() {
   image2,
   image3
 ];
+
+  const handleAddToCart = async () => {
+    try {
+      const item = {
+        id: 4,
+        name: 'Silhouette No. 1 – Vermilion Women\'s Blazer',
+        quantity: 1,
+        price: 7999,
+      };
+
+      const res = await fetch(`${import.meta.env.VITE_BASEURL}/api/cart`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(item),
+      });
+
+      const data = await res.json();
+      console.log('Added to cart:', data);
+      alert('Item added to cart!');
+    } catch (err) {
+      console.error('Error adding to cart:', err);
+      alert('Failed to add item.');
+    }
+  };
+
+
   return (
     <div className="flex flex-col mt-5 md:flex-row min-h-screen">
 
@@ -70,7 +96,7 @@ export default function ProductDetail() {
 
 
     <div className="flex flex-col sm:flex-row gap-4 pt-4">
-      <button className="border px-6 py-2 text-black rounded w-full sm:w-auto hover:bg-gray-800 hover:text-white transition">
+      <button onClick={handleAddToCart} className="border px-6 py-2 text-black rounded w-full sm:w-auto hover:bg-gray-800 hover:text-white transition">
         Add to Cart
       </button>
       <button

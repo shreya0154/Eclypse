@@ -44,6 +44,8 @@ const Home = () => {
 
             <Gallery/>
 
+            <div className="text-4xl p-10 pr-0">Silhouette No. 1 – Vermilion</div>
+
             <ProductDetail/>
             <ProductDetailsAccordion/>
             <CustomerReview/>
