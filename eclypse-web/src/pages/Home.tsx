@@ -49,7 +49,6 @@ const Home = () => {
             <ProductDetail/>
             <ProductDetailsAccordion/>
             <CustomerReview/>
-            <Footer/>
 
         </div>
 
