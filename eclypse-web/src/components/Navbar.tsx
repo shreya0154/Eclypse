@@ -1,15 +1,13 @@
 
 
 import { useEffect, useState } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.jpg';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
 
-  const isHome = location.pathname === '/';
 
   useEffect(() => {
     const onScroll = () => {
