@@ -18,7 +18,7 @@ export default function Checkout() {
         </div>
         <div className="flex gap-4">
           <button className="border px-4 py-2 rounded text-black hover:bg-red-500 hover:text-white">Cancel</button>
-          <button className="bg-black text-white px-4 py-2 rounded hover:bg-gray-600">Save This Address</button>
+          <button onClick={()=>{alert('Address Saved Successfully !')}}className="bg-black text-white px-4 py-2 rounded hover:bg-gray-600">Save This Address</button>
         </div>
       </div>
 
@@ -34,7 +34,7 @@ export default function Checkout() {
         <div className="flex justify-between mt-4 font-bold text-lg">
           <span>Total:</span><span>₹ {sum}</span>
         </div>
-        <button className="bg-black text-white w-full mt-6 py-2 rounded">Place Order</button>
+        <button onClick={()=>{alert('Order Placed !')}}className="bg-black text-white w-full mt-6 py-2 rounded">Place Order</button>
       </div>
     </div>
   );
